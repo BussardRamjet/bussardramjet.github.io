@@ -1,1 +1,119 @@
-Hello
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeRedRevisions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #ff3333;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .button {
+            height: 50px;
+            background: #e8491d;
+            border: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #ffffff;
+        }
+        .button:hover {
+            background: #ff3333;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            text-align: left;
+            margin: 3px;
+        }
+        .form-group input {
+            height: 25px;
+            width: 98%;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">CodeRed</span>Revisions</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <!-- Add other navigation links here -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Incident Report Form</h2>
+        <form action="submit_form_data_url" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Incident:</label>
+                <textarea id="reason" name="reason" required style="width: 100%; height: 150px;"></textarea>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
